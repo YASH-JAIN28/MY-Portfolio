@@ -44,7 +44,7 @@ export default function Skills() {
       ([entry]) => {
         setActive(entry.isIntersecting && entry.intersectionRatio > 0.1);
       },
-      { threshold: [0.1] }
+      { threshold: [0.1] },
     );
 
     io.observe(el);
@@ -109,13 +109,13 @@ export default function Skills() {
     >
       {/* Background glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-0 w-[300px] h-[300px] rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-20 blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-0 w-[300px] h-[300px] rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-20 blur-[120px] animate-pulse delay-500" />
+        <div className="absolute top-1/4 left-0 w-[300px] h-[300px] rounded-full bg-gradient-to-r from-[#0f172a] via-[#1d4ed8] to-[#38bdf8] opacity-20 blur-[120px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-0 w-[300px] h-[300px] rounded-full bg-gradient-to-r from-[#0f172a] via-[#1d4ed8] to-[#38bdf8] opacity-20 blur-[120px] animate-pulse delay-500" />
       </div>
 
       {/* Title */}
       <motion.h2
-        className="text-4xl mt-5 sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63] z-10"
+        className="text-4xl mt-5 sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#7dd3fc] via-[#38bdf8] to-[#2563eb] z-10"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -136,7 +136,7 @@ export default function Skills() {
       <div className="relative w-full overflow-hidden">
         <motion.div
           ref={trackRef}
-          className="flex gap-10 text-6xl text-[#1cd8d2]"
+          className="flex gap-10 text-6xl text-[#7dd3fc]"
           style={{ x, whiteSpace: "nowrap", willChange: "transform" }}
         >
           {repeated.map((s, i) => (

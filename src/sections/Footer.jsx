@@ -1,11 +1,7 @@
 // src/components/Footer.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FaLinkedinIn,
-  FaInstagram,
-  FaGithub,
-} from "react-icons/fa6";
+import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa6";
 
 /* ================= SOCIAL LINKS (YASH) ================= */
 const socials = [
@@ -74,7 +70,7 @@ const Footer = () => {
         </div>
 
         {/* Accent line */}
-        <div className="h-[3px] w-24 md:w-32 rounded-full bg-gradient-to-r from-[#0D58CC] via-cyan-300 to-emerald-400" />
+        <div className="h-[3px] w-24 md:w-32 rounded-full bg-gradient-to-r from-[#60a5fa] via-[#38bdf8] to-[#1d4ed8]" />
 
         {/* SOCIAL ICONS */}
         <div className="flex gap-6 text-2xl md:text-3xl">

@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 // avatar optional – agar robot nahi chahiye to hata sakta hai
-import avatar from "../assets/avator.png";
+import avatar from "../assets/main.my.image.png";
 
 import { FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa6";
 import ParticleBackground from "../components/ParticlesBackground";
@@ -47,7 +47,7 @@ const Home = React.forwardRef((props, ref) => {
   /* ================= ROLES (REALISTIC) ================= */
   const roles = useMemo(
     () => ["MERN Stack Developer", "AI & ML Learner", "Full Stack Student"],
-    []
+    [],
   );
 
   const [index, setIndex] = useState(0);
@@ -57,16 +57,19 @@ const Home = React.forwardRef((props, ref) => {
   /* ================= TYPING EFFECT ================= */
   useEffect(() => {
     const current = roles[index];
-    const timeout = setTimeout(() => {
-      if (!deleting && subIndex < current.length) setSubIndex((v) => v + 1);
-      else if (!deleting && subIndex === current.length)
-        setTimeout(() => setDeleting(true), 1200);
-      else if (deleting && subIndex > 0) setSubIndex((v) => v - 1);
-      else if (deleting && subIndex === 0) {
-        setDeleting(false);
-        setIndex((p) => (p + 1) % roles.length);
-      }
-    }, deleting ? 40 : 60);
+    const timeout = setTimeout(
+      () => {
+        if (!deleting && subIndex < current.length) setSubIndex((v) => v + 1);
+        else if (!deleting && subIndex === current.length)
+          setTimeout(() => setDeleting(true), 1200);
+        else if (deleting && subIndex > 0) setSubIndex((v) => v - 1);
+        else if (deleting && subIndex === 0) {
+          setDeleting(false);
+          setIndex((p) => (p + 1) % roles.length);
+        }
+      },
+      deleting ? 40 : 60,
+    );
     return () => clearTimeout(timeout);
   }, [subIndex, deleting, index, roles]);
 
@@ -80,12 +83,16 @@ const Home = React.forwardRef((props, ref) => {
 
       {/* ================= GRADIENT BLOBS ================= */}
       <div className="absolute inset-0">
-        <div className="absolute -top-32 -left-32 w-[60vw] h-[60vw] max-w-[500px] max-h-[500px]
-        rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1CD8D2]
-        opacity-20 blur-[140px] animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-[60vw] h-[60vw] max-w-[500px] max-h-[500px]
-        rounded-full bg-gradient-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63]
-        opacity-25 blur-[150px] animate-pulse delay-500" />
+        <div
+          className="absolute -top-32 -left-32 w-[60vw] h-[60vw] max-w-[500px] max-h-[500px]
+        rounded-full bg-gradient-to-r from-[#0f172a] via-[#1d4ed8] to-[#38bdf8]
+        opacity-20 blur-[140px] animate-pulse"
+        />
+        <div
+          className="absolute bottom-0 right-0 w-[60vw] h-[60vw] max-w-[500px] max-h-[500px]
+        rounded-full bg-gradient-to-r from-[#38bdf8] via-[#2563eb] to-[#0f172a]
+        opacity-25 blur-[150px] animate-pulse delay-500"
+        />
       </div>
 
       <div className="relative z-10 h-full max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2">
@@ -106,7 +113,7 @@ const Home = React.forwardRef((props, ref) => {
           <h1x
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold
             text-transparent bg-clip-text bg-gradient-to-r
-            from-[#1CD8D2] via-[#00bf8f] to-[#302b63]"
+            from-[#7dd3fc] via-[#38bdf8] to-[#2563eb]"
           >
             Hello, I&apos;m
             <br />
@@ -117,9 +124,9 @@ const Home = React.forwardRef((props, ref) => {
 
           {/* description */}
           <p className="mt-6 text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl">
-            I build scalable and high-performance web applications using the MERN
-            stack, while exploring Artificial Intelligence and Machine Learning
-            to create intelligent, real-world solutions.
+            I build scalable and high-performance web applications using the
+            MERN stack, while exploring Artificial Intelligence and Machine
+            Learning to create intelligent, real-world solutions.
           </p>
 
           {/* buttons */}
@@ -127,13 +134,13 @@ const Home = React.forwardRef((props, ref) => {
             <a
               href="#projects"
               className="px-6 py-3 rounded-full text-lg font-medium text-white
-              bg-gradient-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63]
+              bg-gradient-to-r from-[#38bdf8] via-[#2563eb] to-[#0f172a]
               shadow-lg hover:scale-105 transition"
             >
               View My Work
             </a>
             <a
-              href="/Resume.pdf"
+              href="/YASH-RESUME.pdf"
               download
               className="px-6 py-3 rounded-full text-lg font-medium text-black bg-white
               hover:bg-gray-200 shadow-lg hover:scale-105 transition"

@@ -1,12 +1,6 @@
 // Importing React library so we can create and use components
 import React from "react";
 
-// Importing image assets for the testimonials section
-import m1 from "../assets/m1.PNG"; // Male testimonial image 1
-import m2 from "../assets/m2.PNG"; // Male testimonial image 2
-import w1 from "../assets/w1.PNG"; // Female testimonial image 1
-import w2 from "../assets/w2.PNG"; // Female testimonial image 2
-
 // Importing Framer Motion for smooth animations
 import { motion } from "framer-motion";
 
@@ -14,35 +8,31 @@ import { motion } from "framer-motion";
 const MH2 = motion.h2; // Animated <h2> tag
 const MDiv = motion.div; // Animated <div> tag
 
-// Array containing all testimonial data (name, role, review, image)
+// Array containing all testimonial data (name, role, review)
 const testimonials = [
   {
-    name: "Yash Sahu",
-    role: "Software Engineer at HCL Technologies",
+    name: "Sachin",
+    role: "Client",
     review:
-      "yash is a visionary developer. His attention to detail and creativity blew us away. Our project was a massive success because of him.",
-    image: m1, // Points to imported image
+      "Working with Yash was an absolute pleasure. His attention to detail and creativity blew us away. Our project was a massive success because of him.",
   },
   {
-    name: "Heather Forster",
-    role: "UI/UX Designer at PixelWorks",
+    name: "Aryan",
+    role: "Designer",
     review:
-      "Working with Yash was an absolute pleasure. He brings design and code together like magic. Highly recommend him!",
-    image: w1,
+      "Yash brings design and code together like magic. He is thoughtful, fast, and incredibly reliable in every project.",
   },
   {
-    name: "Amy Jacobsan",
-    role: "Tech Manager at CodeEmpire",
+    name: "Amrit",
+    role: "Project Lead",
     review:
-      "From concept to execution, Yash  handled everything flawlessly. His work ethic and innovation are unmatched.",
-    image: m2,
+      "From concept to execution, Yash handled everything flawlessly. His work ethic and innovation are unmatched.",
   },
   {
-    name: "Carry Smith",
-    role: "CTO at Innovate Labs",
+    name: "Ansh",
+    role: "Tech Partner",
     review:
-      "Yash transformed our outdated platform into something modern and powerful. His skills are world-class.",
-    image: w2,
+      "Yash transformed our outdated platform into something modern and powerful. His skills are world-class and highly recommended.",
   },
 ];
 
@@ -78,19 +68,8 @@ function Testimonials() {
             className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 flex flex-col items-center text-center transform transition duration-500 hover:scale-105 hover:-rotate-1"
             // Glass effect card, rounded corners, hover animation
           >
-            {/* Person Image */}
-            <img
-              src={testi.image} // Image from array
-              alt={testi.name} // Accessibility
-              className="w-20 h-20 rounded-full border-2 border-white/40 mb-4 object-cover"
-              // Circle image with border
-              loading="lazy" // Lazy load for performance
-            />
-
             {/* Testimonial Review Text */}
-            <p className="text-gray-200 italic mb-4">
-              "{testi.review}"
-            </p>
+            <p className="text-gray-200 italic mb-4">"{testi.review}"</p>
 
             {/* Name of the person */}
             <h3 className="text-lg font-semibold">{testi.name}</h3>

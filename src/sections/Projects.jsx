@@ -28,7 +28,7 @@ export default function Projects() {
           className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-10 overflow-hidden"
         >
           {/* Gradient glow */}
-          <div className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63] opacity-20 blur-[120px]" />
+          <div className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-r from-[#38bdf8] via-[#2563eb] to-[#0f172a] opacity-20 blur-[120px]" />
 
           <div className="relative z-10">
             {/* Project Title */}

@@ -11,12 +11,11 @@ export default function About() {
     >
       {/* Background accents */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-10 -left-10 w-[360px] h-[360px] rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1CD8D2] opacity-20 blur-[120px] animate-pulse" />
-        <div className="absolute bottom-0 right-10 w-[420px] h-[420px] rounded-full bg-gradient-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63] opacity-15 blur-[140px] animate-pulse delay-300" />
+        <div className="absolute -top-10 -left-10 w-[360px] h-[360px] rounded-full bg-gradient-to-r from-[#0f172a] via-[#1d4ed8] to-[#38bdf8] opacity-20 blur-[120px] animate-pulse" />
+        <div className="absolute bottom-0 right-10 w-[420px] h-[420px] rounded-full bg-gradient-to-r from-[#38bdf8] via-[#2563eb] to-[#0f172a] opacity-15 blur-[140px] animate-pulse delay-300" />
       </div>
 
       <div className="relative z-10 max-w-6xl w-full mx-auto px-6 md:px-10 lg:px-12 py-20 flex flex-col gap-12">
-        
         {/* Profile header */}
         <motion.div
           className="flex flex-col md:flex-row items-center md:items-stretch gap-8"
@@ -29,7 +28,7 @@ export default function About() {
           <motion.div
             className="relative w-[160px] h-[160px] md:w-[200px] md:h-[200px]
             rounded-2xl overflow-hidden shadow-2xl
-            border border-[#1CD8D2]/25"
+            border border-[#38bdf8]/25"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 200, damping: 18 }}
           >
@@ -42,7 +41,7 @@ export default function About() {
 
           {/* Name + Role + Bio */}
           <div className="flex-1 flex flex-col justify-center text-center md:text-left">
-            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63]">
+            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#7dd3fc] via-[#38bdf8] to-[#2563eb]">
               Yash Jain
             </h2>
 
@@ -51,10 +50,16 @@ export default function About() {
             </p>
 
             <p className="mt-4 text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl md:max-w-3xl">
-              I am a BCA graduate from IMS Ghaziabad and currently pursuing an MCA
-              with a specialization in Artificial Intelligence and Machine Learning.
-              I focus on building scalable MERN stack applications while exploring
-              AI and ML for real-world use cases.
+              I&apos;m Yash Jain, a Computer Applications student and full-stack
+              developer passionate about building modern, interactive, and
+              practical digital experiences. I work primarily with React.js,
+              JavaScript, Node.js, Express.js, and MongoDB, while continuously
+              exploring new technologies and AI-assisted development. I enjoy
+              turning ideas into functional products, participating in
+              hackathons, and solving problems through code. With experience
+              across web development, AR/VR projects, and competitive
+              hackathons, I&apos;m always looking for opportunities to learn,
+              build, and create meaningful technology.
             </p>
 
             {/* Stats */}
@@ -110,12 +115,14 @@ export default function About() {
             About Me
           </h3>
           <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
-            I enjoy building modern web applications using the MERN stack and
-            continuously improving my problem-solving and development skills.
+            I enjoy building modern, interactive, and practical digital
+            experiences by combining frontend design, backend logic, and
+            thoughtful product thinking.
           </p>
           <p className="mt-4 text-gray-400 text-base sm:text-lg">
-            My long-term goal is to become a skilled MERN Stack and AI/ML Engineer
-            capable of building intelligent, scalable products.
+            I&apos;m always looking for opportunities to learn, build, and
+            create meaningful technology through full-stack development,
+            hackathons, and real-world problem-solving.
           </p>
         </motion.div>
       </div>
